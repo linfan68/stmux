@@ -79,7 +79,7 @@ module.exports = function (grunt) {
             }
         }
     })
-    grunt.registerTask("default", [ "eslint", "babel" ])
+    grunt.registerTask("default", [ "babel" ])
     grunt.registerTask("dev",     [ "default", "watch" ])
 }
 

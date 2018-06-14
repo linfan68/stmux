@@ -47,7 +47,7 @@
     "dependencies" : {
         "aggregation":                               "1.2.3",
         "blessed":                                   "0.1.81",
-        "blessed-xterm":                             "1.1.18",
+        "blessed-xterm":                             "git+https://github.com/linfan68/blessed-xterm.git",
         "chalk":                                     "2.4.1",
         "strip-ansi":                                "4.0.0",
         "yargs":                                     "11.0.0",

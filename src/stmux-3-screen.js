@@ -1,6 +1,6 @@
 /*
 **  stmux -- Simple Terminal Multiplexing for Node Environments
-**  Copyright (c) 2017-2018 Ralf S. Engelschall <rse@engelschall.com>
+**  Copyright (c) 2017-2019 Dr. Ralf S. Engelschall <rse@engelschall.com>
 **
 **  Permission is hereby granted, free of charge, to any person obtaining
 **  a copy of this software and associated documentation files (the
@@ -54,7 +54,7 @@ export default class stmuxScreen {
             catch (ex) {
                 this.fatal("under Windows/MinTTY you need the \"winpty\" utility on PATH")
             }
-            let child = childProcess.spawnSync(winpty, process.argv, {
+            const child = childProcess.spawnSync(winpty, process.argv, {
                 stdio: [ "inherit", "inherit", "inherit" ]
             })
             process.exit(child.status)

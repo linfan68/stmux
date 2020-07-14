@@ -1,6 +1,6 @@
 /*
 **  stmux -- Simple Terminal Multiplexing for Node Environments
-**  Copyright (c) 2017-2018 Ralf S. Engelschall <rse@engelschall.com>
+**  Copyright (c) 2017-2019 Dr. Ralf S. Engelschall <rse@engelschall.com>
 **
 **  Permission is hereby granted, free of charge, to any person obtaining
 **  a copy of this software and associated documentation files (the
@@ -35,7 +35,7 @@ export default class stmuxParser {
             optimize: "size",
             trace:    false
         })
-        let result = PEGUtil.parse(parser, this.spec, {
+        const result = PEGUtil.parse(parser, this.spec, {
             startRule: "split",
             makeAST: (line, column, offset, args) => {
                 return asty.create.apply(asty, args).pos(line, column, offset)

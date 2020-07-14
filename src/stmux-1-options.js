@@ -1,6 +1,6 @@
 /*
 **  stmux -- Simple Terminal Multiplexing for Node Environments
-**  Copyright (c) 2017-2018 Ralf S. Engelschall <rse@engelschall.com>
+**  Copyright (c) 2017-2019 Dr. Ralf S. Engelschall <rse@engelschall.com>
 **
 **  Permission is hereby granted, free of charge, to any person obtaining
 **  a copy of this software and associated documentation files (the
@@ -80,8 +80,8 @@ export default class stmuxOptions {
                 /*  via stdin  */
                 this.spec = ""
                 process.stdin.setEncoding("utf-8")
-                let BUFSIZE = 256
-                let buf = Buffer.alloc(BUFSIZE)
+                const BUFSIZE = 256
+                const buf = Buffer.alloc(BUFSIZE)
                 while (true) {
                     let bytesRead = 0
                     try {
